@@ -1,5 +1,3 @@
-// This code was written by u/vinlind
-
 // Defining variables
 var date = new Date(); // Sets a variable for the date
 var month = date.getMonth(); // Gets the current month from var date as a number 0-11
