@@ -4,19 +4,23 @@ var month = date.getMonth(); // Gets the current month from var date as a number
 var year = date.getFullYear(); // Gets the current year form var date
 var day = date.getDate(); // Gets the current day from var date in a number 1-31
 var weekday = date.getDay(); // Gets the current weekday from var date in a number 0-6
-var monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; // Setting an array to translate the month to a word, and not a number
+var monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; // Setting an array to translate the month from a number to a word
 var weekdayArr = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]; // Same array concept for day of the week instead of month
-var monthV = monthArr[month]; // Using the array to translate the month (var month) to a word (var monthV)
+var monthV = monthArr[month]; // Using array monthArr to translate the month from a number to a word
 var weekdayV = weekdayArr[weekday]; // Same concept as above
+var calcYear = year
 
 // Checking if the current month according to the system clock on the viewers device, is November
 if (month == 10) {
 	document.body.style.backgroundColor = "#e85c3e";
-	var cDD = new Date("December 1, " + year + " 00:00:00").getTime();
+	var cDD = new Date("December 1, " + calcYear + " 00:00:00").getTime();
 	noNutNovember();
 } else {
 	document.body.style.backgroundColor = "#5fa052";
-	var cDD = new Date("November 1, " + year + " 00:00:00").getTime();
+	if (month < 10) {
+		var calcYear = year + 1;
+	}	
+	var cDD = new Date("November 1, " + calcYear + " 00:00:00").getTime();
 	noNutNovember();
 }
 
