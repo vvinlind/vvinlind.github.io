@@ -14,11 +14,11 @@ var weekdayV = weekdayArr[weekday]; // Same concept as above
 // Checking if the current month according to the system clock on the viewers device, is November
 if (month == 10) {
 	document.body.style.backgroundColor = "#e85c3e";
-	var cDD = new Date("December 1, 2018 00:00:00").getTime();
+	var cDD = new Date("December 1, " + year + " 00:00:00").getTime();
 	noNutNovember();
 } else {
 	document.body.style.backgroundColor = "#5fa052";
-	var cDD = new Date("November 1, 2018 00:00:00").getTime();
+	var cDD = new Date("November 1, " + year + " 00:00:00").getTime();
 	noNutNovember();
 }
 
