@@ -17,7 +17,7 @@ if (month == 10) {
 	noNutNovember();
 } else {
 	document.body.style.backgroundColor = "#5fa052";
-	if (month < 10) {
+	if (month > 10) {
 		var calcYear = year + 1;
 	}	
 	var cDD = new Date("November 1, " + calcYear + " 00:00:00").getTime();
